@@ -12,9 +12,10 @@
  *
  * SPDX-License-Identifier: Apache-2.0
  */
-pragma solidity >= 0.5.3;
+pragma solidity >=0.5.3;
 
 contract Validators {
+    uint256 private number;
     address[] validators;
 
     constructor() {}
@@ -23,4 +24,11 @@ contract Validators {
         return validators;
     }
 
+    function getNumber() public view returns (uint256) {
+        return number;
+    }
+
+    function setNumber(uint256 _num) public {
+        number = _num;
+    }
 }
