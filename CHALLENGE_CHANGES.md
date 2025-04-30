@@ -1,4 +1,16 @@
-## 1. Extended ValidatorContractController Class
+## 1 Modified Validators contract
+
+```solidity
+  function getNumber() public view returns (uint256) {
+        return number;
+    }
+
+    function setNumber(uint256 _num) public {
+        number = _num;
+    }
+```
+
+## 2. Extended ValidatorContractController Class
 
 ```java
 // Added constants for new functions
@@ -71,7 +83,7 @@ private BigInteger parseGetNumberResult(final TransactionSimulatorResult result)
 }
 ```
 
-## 2. Added Unit Tests
+## 3. Added Unit Tests
 
 ```java
 // Added test constant
@@ -179,7 +191,9 @@ public void setNumberReturnsFalseWhenUnsuccessful() {
 }
 ```
 
-## 3. Summary of Changes
+## 4. Summary of Changes
+
+#### Added a getter and setter to Validators contract
 
 ### Added to ValidatorContractController:
 
